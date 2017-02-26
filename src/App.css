@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -18,14 +13,42 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#header-id {
+  color: white;
 }
 
-#divider {
-  height: 30px;
+#comments {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+.ui.comments {
+  width: 96%;
+  max-width: 1010px;
+}
+
+#content {
+  margin-top: 30px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui.card {
+    margin-right: 2%;
+}
+
+.ui.container {
+    max-width: 1130px;
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+}
+
+#tags {
+  margin-top: 30px;
 }
 
 .wrapper {
@@ -33,9 +56,13 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer {
+
   margin-top: 30px;
   background: #202020;
   padding: 30px 0;
@@ -50,15 +77,8 @@ footer h4 {
 }
 
 footer ul {
-  float: left;
   width: 25%;
   list-style-type: none;
-}
-
-footer:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 footer li {
@@ -81,16 +101,24 @@ footer li {
   font-size: 14px;
 }
 
-#header-id {
-  color: white;
-}
-
 @media screen and (max-width: 960px) {
   footer ul {
   width: 50%;
 }
+}
 
-footer ul:nth-child(odd) {
-  clear: both;
+@media screen and (max-width: 540px) {
+#content {
+  flex-direction: column-reverse;
+}
+
+.ui.card {
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 30px !important;
+}
+
+  footer ul {
+  width: 100%;
 }
 }
